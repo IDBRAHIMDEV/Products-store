@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
+import { Product } from '../models/product';
 
 
 @Injectable({
@@ -12,5 +13,10 @@ export class ProductService {
 
   getProducts() {
     return this.fs.collection('products').valueChanges();
+  }
+
+
+  addProduct(product: Product) {
+    return this.fs.collection('products').add(product);
   }
 }
