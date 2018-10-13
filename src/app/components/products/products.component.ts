@@ -13,7 +13,7 @@ export class ProductsComponent implements OnInit {
   
   products = [];
 
-  
+
 
   ngOnInit() {
      this.listProduct();
@@ -21,6 +21,7 @@ export class ProductsComponent implements OnInit {
 
   listProduct() {
     this.productService.getProducts().subscribe(products => {
+      console.log(products);
       this.products = products;
     });
   }

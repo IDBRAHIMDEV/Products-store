@@ -31,7 +31,7 @@
            <td>{{ product.quantity | number }}</td>
            <td class="text-right" nowrap>
              <a href="" class="btn btn-warning btn-sm mr-1"><i class="fa fa-eye"></i></a>
-             <a href="" class="btn btn-danger btn-sm"><i class="fa fa-pencil"></i></a>
+             <a [routerLink]="['/products/edit', product.id]" class="btn btn-danger btn-sm"><i class="fa fa-pencil"></i></a>
 
            </td>
          </tr>
