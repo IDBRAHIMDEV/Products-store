@@ -27,15 +27,14 @@ export class EditProductComponent implements OnInit {
 
     let productId = this.router.snapshot.params.id;
     
-    this.productService.getProduct(productId).subscribe(product => {
-        this.product = product;
+    this.productService.getProduct(productId).subscribe(_product => {
+        this.product = _product;
         this.product.id = productId;
     })
   }
 
 
   changeProduct(form) {
-     
     
     if(form.valid) {
       this.productService.updateProduct(this.product)

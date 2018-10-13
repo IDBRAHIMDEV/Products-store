@@ -22,7 +22,7 @@
          </tr>
        </thead>
        <tbody>
-         <tr *ngFor="let product of products">
+         <tr *ngFor="let product of products" (dblclick)="suppProduct(product.id)">
            <td> 
              <h4>{{ product.name }}</h4>
              <em>{{ product.description }}</em> 
