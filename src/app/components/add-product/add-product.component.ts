@@ -22,12 +22,19 @@ export class AddProductComponent implements OnInit {
     
   }
 
-  createProduct() {
-    this.productService.addProduct(this.product)
+  createProduct(form) {
+    
+    if(form.valid) {
+      this.productService.addProduct(this.product)
       .then((res => {
          this.route.navigate(['/']);
       }))
       .catch((error) => console.error(error.message))
+    }else{
+      alert(1)
+    }
+
+    
   }
 
 

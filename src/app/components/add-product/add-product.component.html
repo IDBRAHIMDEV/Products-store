@@ -12,6 +12,9 @@
 
 <div class="row">
   <div class="col-md-8 mx-auto">
+
+     <form #f="ngForm">
+
       <div class="form-group">
        <label for="Name">Name</label>
        <input required minlength="3" #name="ngModel" id="Name" name="name" [(ngModel)]="product.name" type="text" class="form-control">
@@ -47,9 +50,9 @@
           </div>         
       </div>
 
-      <button class="btn btn-success btn-block" (click)="createProduct()">
+      <button class="btn btn-success btn-block" (click)="createProduct(f)">
         <i class="fa fa-send"></i> Add
       </button>
-    
+    </form>
   </div>
 </div>
