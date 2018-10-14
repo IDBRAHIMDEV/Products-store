@@ -18,6 +18,7 @@ import { AppComponent } from './app.component';
 //Module Angularfire
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireAuthModule } from '@angular/fire/auth';
 
 import { HttpModule } from '@angular/http';
 import { FormsModule } from '@angular/forms'
@@ -43,7 +44,8 @@ import { FormsModule } from '@angular/forms'
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
     HttpModule,
-    FormsModule
+    FormsModule,
+    AngularFireAuthModule
   ],
   providers: [],
   bootstrap: [AppComponent]
