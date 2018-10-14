@@ -20,6 +20,8 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 
+import { FlashMessagesModule } from 'angular2-flash-messages';
+
 import { HttpModule } from '@angular/http';
 import { FormsModule } from '@angular/forms'
 
@@ -45,7 +47,8 @@ import { FormsModule } from '@angular/forms'
     AngularFirestoreModule,
     HttpModule,
     FormsModule,
-    AngularFireAuthModule
+    AngularFireAuthModule,
+    FlashMessagesModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
